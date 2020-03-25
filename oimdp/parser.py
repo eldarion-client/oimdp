@@ -191,8 +191,8 @@ def parser(text):
             be_type = "man"
             if (t.BIO_WOM in il):
                 be_type = "wom"
-            elif (t.BIO_REP in il):
-                be_type = "rep"
+            elif (t.BIO_REF in il):
+                be_type = "ref"
             elif (t.LIST_NAMES in il):
                 be_type = "names"
             elif (t.EVENT in il):
