@@ -84,7 +84,7 @@ def parser(text):
 
     # RE patterns
     para_pattern = re.compile(r"^#($|[^#])")    
-    bio_pattern = re.compile(rf"{t.BIO_MAN}[^\w]")
+    bio_pattern = re.compile(rf"{re.escape(t.BIO_MAN)}[^\w]")
     morpho_pattern = re.compile(r"#~:([^:]+?):")
     region_pattern = re.compile(
         rf"({t.PROV}|{t.REG}\d) .*? {t.GEO_TYPE} .*? ({t.REG}\d|{t.STTL}) ([\w# ]+) $"
